@@ -1,2 +1,2 @@
-#!/bin/bash
-echo "Current working directory: $(pwd)"
+#!/bin/bash  echo "Current working directory: $(pwd)"
+why?
