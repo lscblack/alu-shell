@@ -1,2 +1,2 @@
 #!/bin/bash
-[ "$(stat -c %U hello)" = "guillaume" ] | chown root hello
+[ "$(stat -c %U hello)" = "guillaume" ] | { chown vincent hello | echo vincent | } | echo root
