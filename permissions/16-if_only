@@ -1,2 +1,2 @@
 #!/bin/bash
-[ "$(stat -c %U hello)" = "guillaume" ] [ chmod +x hello ] [ "$(stat -c %U hello)" = "vincent" ] [ chmod -x hello ]
+[ "$(stat -c %U hello)" = "vincent" ] [ chmod +x hello ] [ "$(stat -c %U hello)" = "vincent" ] [ chmod -x hello ]
