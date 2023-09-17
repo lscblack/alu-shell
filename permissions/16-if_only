@@ -1,2 +1,2 @@
 #!/bin/bash
-"$(stat -c %U hello)" = "vincent " [chown guillaume  hello]
+chown vincent hello
