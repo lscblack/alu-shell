@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Current user: $(whoami)"
+"$(stat -c %U hello)" = "guillaume" [chown vincent hello]
