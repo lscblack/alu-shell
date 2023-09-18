@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -a ! -iname "MyFile" -exec sh -c 'echo "${0##*/}"' {} \; | rev | cut -f2- -d. | rev | LC_COLLATE=C sort -f -t. -k1,1 -k2,2
+find . -type f -iname "*.gif" ! -iname "MyFile" -printf "%f\n" | rev | cut -f2- -d. | rev | LC_COLLATE=C sort -f -t. -k1,1 -k2,2
