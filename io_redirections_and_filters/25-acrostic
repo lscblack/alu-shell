@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -c 1 '\n' | tr -s 
+cut -c 1 < "$1" | paste -sd ''
