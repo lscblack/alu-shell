@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -print | sed 's/^\.\///'
+find . -type d -empty -print -o -type f -empty -print
