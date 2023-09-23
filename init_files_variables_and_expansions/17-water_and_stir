@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$((16#WATER + 16#STIR))" | bc | tr -d '\n'
+echo "$((0x${WATER} + 0x${STIR}))"
