@@ -1,2 +1,2 @@
 #!/bin/bash
-declare -p | grep -E 'BASH=|BASHOPTS='
+set | less
