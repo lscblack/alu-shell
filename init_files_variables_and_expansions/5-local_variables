@@ -1,2 +1,2 @@
 #!/bin/bash
-compgen -A variable -A function
+env | grep 'BASH\|BASHOPTS'
