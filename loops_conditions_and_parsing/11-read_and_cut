@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Define the file path
+file_path="/etc/passwd"
+
+if [ -e "$file_path" ]; then
+   
+    while IFS=: read -r username _ userid _ _ home_directory _; do
+        
+        echo "Username: $username"
+        echo "User ID: $userid"
+        echo "Home Directory: $home_directory"
+        echo
+    done < "$file_path"
+else
+    echo "The file $file_path does not exist."
+fi
