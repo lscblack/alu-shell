@@ -8,7 +8,7 @@ do
     if [ $i -eq 9 ]
     then
 	
-       echo -e "Best School \n Hi"
+       echo -e "Best School\nHi"
 
      else
 	 echo "Best School"
