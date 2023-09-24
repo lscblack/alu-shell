@@ -1,11 +1,3 @@
 #!/usr/bin/env bash
 #apache codes
-log_file="apache-access.log"
-
-if [ -e "$log_file" ]; then
-   
-    awk '{ip_code[$1][$9]++} END {for (ip in ip_code) {for (code in ip_code[ip]) {print ip_code[ip][code], ip, code}}}' "$log_file" \
-    | sort -nr
-else
-    echo "The log file $log_file does not exist."
-fi
+awk '{print $1,$9}' apache-access.log | sort -V | uniq -c | sort -n | perl -e 'print reverse <>'    
