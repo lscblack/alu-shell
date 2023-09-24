@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+: '
+This is a
+multi-line comment
+'
+echo "he"
