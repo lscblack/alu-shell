@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Initialize hour and minute variables
+hour=0
+minute=1
+
+# Using a while loop to display time for 12 hours and 59 minutes
+while [ $hour -le 12 ]
+do
+    while [ $minute -le 59 ]
+    do
+        # Display the time in 12-hour format
+        if [ $hour -eq 0 ]
+        then
+            echo "12:$minute AM"
+        elif [ $hour -le 11 ]
+        then
+            echo "$hour:$minute AM"
+        else
+            echo "12:$minute PM"
+        fi
+
+        # Increment the minute counter
+        ((minute++))
+    done
+    
+    # Reset the minute counter and increment the hour counter
+    minute=1
+    ((hour++))
+done | head -n 70

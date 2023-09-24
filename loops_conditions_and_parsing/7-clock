@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Initialize an hour counter
+hour=0
+
+# Using a while loop to display hours from 0 to 12
+while [ $hour -le 12 ]
+do
+    echo "Hour: $hour"
+
+    # Initialize a minute counter
+    minute=1
+
+    # Using a nested while loop to display minutes from 1 to 59
+    while [ $minute -le 59 ]
+    do
+        echo $minute
+        ((minute++))
+    done
+
+    ((hour++))
+done

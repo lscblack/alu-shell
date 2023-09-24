@@ -1,6 +1,27 @@
 #!/usr/bin/env bash
-: '
-This is a
-multi-line comment
-'
-echo "he"
+
+# Initialize a counter
+counter=1
+
+# Using a while loop to iterate from 1 to 20
+while [ $counter -le 20 ]
+do
+    case $counter in
+        4)
+            echo "4"
+            echo "bad luck from China"
+            ;;
+        9)
+            echo "9"
+            echo "bad luck from Japan"
+            ;;
+        17)
+            echo "17"
+            echo "bad luck from Italy"
+            ;;
+        *)
+            echo $counter
+            ;;
+    esac
+    ((counter++))
+done
