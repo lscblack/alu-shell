@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Initialize an hour counter
 hour=0
 
