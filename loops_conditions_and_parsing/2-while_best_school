@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 i=0
+#loop or repeat the code 10 times
 while [ $i -lt 10 ]
 do
     echo "Best School"
