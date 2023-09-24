@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Define the file path
+file_path="/etc/passwd"
+
+if [ -e "$file_path" ]; then
+   
+    while IFS=: read -r username _ userid groupid _ home_directory shell; do
+        
+        user_info=$(grep -E "^$username:" /etc/passwd | cut -d: -f5)
+       
+        echo "The user $username is part of the $groupid gang,"
+        echo "lives in $home_directory, and rides $shell."
+        echo "USER ID's place is protected by the passcode $user_info"
+        echo "More info about the user here: USER ID INFO"
+        echo
+    done < "$file_path"
+else
+    echo "The file $file_path does not exist."
+fi
