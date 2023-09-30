@@ -1,18 +1,15 @@
 #!/usr/bin/env bash
-# Create the PID file
-sudo bash -c "echo $$ > /var/run/holbertonscript.p\
-id"                                                
-trap 'echo "Y U no love me?!"' SIGINT              
-trap "sudo rm -f /var/run/holbertonscript.pid; exi\
-t" SIGQUIT                                         
-trap "sudo rm -f /var/run/holbertonscript.pid; ech\
-o I hate the kill command; exit" SIGTERM           
-                                                   
-while :                                            
-do                                                 
-        echo "To infinity and beyond"              
-        sleep 2                                    
-                                                   
-done                                               
-                                                   
-            
+# Create a file containing the script's PID
+sudo bash -c "echo $$ > /var/run/myscript.pid"
+
+# Define trap handlers for signals
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'echo "I hate the kill command"; sudo rm -f /var/run/myscript.pid; exit' SIGTERM
+trap 'sudo rm -f /var/run/myscript.pid; exit' SIGQUIT
+
+# Infinite loop
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
