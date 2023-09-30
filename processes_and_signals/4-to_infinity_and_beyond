@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Chriss, a Bash script that displays  infinity and beyond indefinitely.
 while true; do
-    echo "To infinity and beyond indefinitely"
+    echo "To infinity and beyond"
     sleep 2
 done
