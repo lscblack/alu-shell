@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Chriss, Bash script that displays: 
-trap 'echo "I am invincible!!!"; exit' SIGTERM
 
 while true; do
     echo "To infinity and beyond indefinitely"
     sleep 2
+    trap 'echo "I am invincible!!!"; exit' SIGTERM
 done
