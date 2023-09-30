@@ -1,9 +1,3 @@
 #!/usr/bin/env bash
-# chriss, Start the process in the background
-./4-to_infinity_and_beyond &
-
-# Get the PID of the background process
-pid=$!
-
-# Stop the process using kill
-kill "$pid"
+# Find and kill the process with the name "4-to_infinity_and_beyond"
+kill $(pgrep "4-to_infinity_and_beyond")
