@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # manage_my_process script
 if [ "$1" = "start" ]                              
 then                                               
