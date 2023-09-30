@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 # Chriss, Bash script that displays: 
 
-while true; do
-    echo "To infinity and beyond indefinitely"
-    sleep 2
-    trap 'echo "I am invincible!!!"; exit' SIGTERM
-done
+while :                                            
+do                                                 
+        echo "To infinity and beyond"              
+        sleep 2                                    
+        trap 'echo "I am invincible!!!"' SIGTERM   
+done                                               
+                                                   
+                                                   
+                                                   
+                                                   
+                
