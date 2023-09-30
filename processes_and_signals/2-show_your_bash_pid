@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Using ps to list all processes with hierarchy and user-oriented format
+# shellcheck disable=SC2009
+
+# Then, grep for lines containing the word "bash"
+ps aux --forest | grep "bash"
