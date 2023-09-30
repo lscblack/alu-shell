@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 # manage_my_process script
-if [ "$1" = "start" ]
-then
-        ./manage_my_process &
-        sudo bash -c "echo $$ > /var/run/my_process.pid"
-        echo "manage_my_process started"
-elif [ "$1" = "stop" ]
-then
-        pkill -f ./manage_my_process
-        sudo rm -f /var/run/my_process.pid
-        echo "manage_my_process stopped"
-elif [ "$1" = "restart" ]
-then
-        pkill -f ./manage_my_process
-        sudo rm -f /var/run/my_process.pid
-        ./manage_my_process &
-        sudo bash -c "echo $$ > /var/run/my_process.pid"
-        echo "manage_my_process restarted"
-else
-        echo "Usage: manage_my_process {start|stop|restart}"
-fi
-                                           
+                                                                                      
+if [ "$1" == "start" ]                                                                
+then                                                                                  
+        ./manage_my_process &                                                         
+        sudo bash -c "echo $$ > /var/run/my_process.pid"                              
+        echo "manage_my_process started"                                              
+elif [ "$1" == "stop" ]                                                               
+then                                                                                  
+        pkill -f ./manage_my_process                                                  
+        sudo rm -f /var/run/my_process.pid                                            
+        echo "manage_my_process stopped"                                              
+elif [ "$1" == "restart" ]                                                            
+then                                                                                  
+        pkill -f ./manage_my_process                                                  
+        sudo rm -f /var/run/my_process.pid                                            
+        ./manage_my_process &                                                         
+        sudo bash -c "echo $$ > /var/run/my_process.pid"                              
+        echo "manage_my_process restarted"                                            
+else                                                                                  
+        echo "Usage: manage_my_process {start|stop|restart}"                          
+fi                                                                                    
        
