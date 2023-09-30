@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Function to clean up and exit
+cleanup() {
+    echo "Cleaning up..."
+    rm -f /var/run/myscript.pid
+    exit 0
+}
+
+# Trap signals and call the cleanup function
+trap 'echo "I hate the kill command";' SIGTERM
+trap 'echo "Y U no love me?!";' SIGINT
+trap cleanup SIGQUIT SIGTERM
+
+# Get the script's PID and save it to a file
+echo $$ > /var/run/myscript.pid
+
+# Display messages indefinitely
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
