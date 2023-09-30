@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
 # Find and kill the "4-to_infinity_and_beyond" process
-killall 4-to_infinity_and_beyond
-
-# Check if any processes matched
-if [ $? -eq 1 ]; then
-    echo "No processes matched"
-fi
+kill  "$(pgrep -f ./4-to_infinity_and_beyond)"  
