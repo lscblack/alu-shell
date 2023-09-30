@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# chriss, Start the process in the background
+./4-to_infinity_and_beyond &
+
+# Get the PID of the background process
+pid=$!
+
+# Wait for a few seconds (simulating some work)
+sleep 5
+
+# Stop the process using kill
+kill "$pid"
