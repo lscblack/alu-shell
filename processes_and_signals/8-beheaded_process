@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Find the process ID (PID) of the "7-highlander" process and Kill it
-pkill -f "./7-highlander"
+# Kill the "7-highlander" process with the SIGKILL signal
+pkill -SIGKILL -f "./7-highlander"
